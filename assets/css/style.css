@@ -1,0 +1,94 @@
+/* COLORS
+	- default body text  #101010
+	- nav background #101010
+	- link hover color #4F55F9
+*/
+
+/* FONTS
+	- default body text  'Rubik', sans-serif;
+*/
+
+/* ===GLOBAL=== */
+
+html { 
+  background: url(../images/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+	font-family: 'Rubik', sans-serif;
+	color: #fff
+}
+
+/* ===PRIMARY=== */
+
+.hidden {
+	display: none;	
+}
+
+.transition {
+  -webkit-animation-name: cssTransition;
+  -webkit-animation-duration: .5s;
+}
+
+@-webkit-keyframes cssTransition {
+  from {
+    -webkit-transform: scale(1.4) skew(0deg);
+  }
+  to {
+    -webkit-transform: scale(1) skew(0deg);
+  }
+}
+
+/* ===SIDEBAR=== */
+
+nav {
+    height: 100%;
+	width: 60px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #000;
+	color: white;
+}
+
+#home {
+	font-family: 'Luckiest Guy', cursive;
+	font-size: 2.5em;
+}
+
+#home:hover {
+	color: #4F55F9;
+}
+
+.nav-icon {
+	padding: 10px 3px 10px 0px;
+	display: block;
+	color: #818181;
+	transition: transform .2s ease-in-out;
+}
+
+.nav-icon:hover,
+.nav-icon:focus {
+	color: #fff;
+	transform: rotate(360deg);
+	/* Permalink - http://colorzilla.com/gradient-editor/#7e5cf9+0,000000+100&0.7+0,0+99 */
+	background: -webkit-linear-gradient(-45deg, rgba(79,85,249,0.7) 0%,rgba(1,2,2,0) 70%,rgba(0,0,0,0) 100%);
+}
+
+.selected {
+	color: #fff;
+	transform: rotate(360deg);
+	/* Permalink - http://colorzilla.com/gradient-editor/#7e5cf9+0,000000+100&0.7+0,0+99 */
+	background: -webkit-linear-gradient(-45deg, rgba(79,85,249,0.7) 0%,rgba(1,2,2,0) 70%,rgba(0,0,0,0) 100%);
+}
+
+.menu-text {
+	font-size: .75em;
+    line-height: 2;
+}
+
+/* ===FOOTER=== */
