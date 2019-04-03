@@ -31,11 +31,32 @@ main {
 	color: #fff;
 }
 
-.tagline {
-  animation-delay: .7s;
+.fun-font {
+	font-family: 'Luckiest Guy', cursive;
+	font-size: 3.2em;
+	background: -webkit-linear-gradient(-45deg, rgba(126,92,249,1) 17%,rgba(14,204,197,1) 17%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.btn {
+	background-color: #000 !important;
+}
+
+.btn:hover {
+	background-color: #4F55F9 !important;
+	font-family: 'Luckiest Guy', cursive;
 }
 
 /* ===PRIMARY=== */
+
+.name {
+  animation-delay: .7s;
+}
+
+.tagline {
+  animation-delay: 1s;
+}
 
 .hidden {
 	display: none;	
@@ -100,7 +121,7 @@ nav .selected {
 
 .sidenav {
 	letter-spacing: .7px;
-	background: -webkit-linear-gradient(0deg, rgba(126,92,249,1) 0%,rgba(1,1,2,.9) 100%);
+	background: -webkit-linear-gradient(0deg, rgba(126,92,249,1) 0%,rgba(1,1,2,0) 100%);
 }
 
 .sidenav li a {

@@ -11,7 +11,10 @@
     <!-- Compiled and minified CSS - Materialize -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	
+	<!-- https://github.com/daneden/animate.css -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
     <!-- Compiled and minified JavaScript - Materialize -->
@@ -53,8 +56,9 @@
 					<section id="homepage" class="hidden">
 						<div class="row">
 							<div class="col s12">
-								<h1>Home</h1>
-								<h5 class="tagline">I'm Alex, the App Creator.</h5>
+								<h1>Greetings!</h1>
+								<h4>I'm Alex,</h4>
+								<h4 class="tagline hidden">the App Creator.</h4>
 							</div>
 						</div>
 					</section>
@@ -79,15 +83,15 @@
 						<div class="row">
 							<div class="col s12">
 								<h1>Portfolio</h1>
-								<div class="row">
-									<div class="col s4"><img class="responsive-img animated lightSpeedIn faster delay-1s" src="assets/images/hangman.jpg"></div>
-									<div class="col s4"><img data-target="modal1" class="modal-trigger responsive-img animated lightSpeedIn fast delay-1s" src="assets/images/crystal.jpg"></div>
-									<div class="col s4"><img class="responsive-img animated lightSpeedIn delay-1s" src="assets/images/rpg.jpg"></div>
+								<div class="row animated lightSpeedIn delay-1s fast">
+									<div class="col s4"><img data-target="modal1" data-link="https://tunkytime.github.io/Word-Guess-Game/" class="modal-trigger responsive-img" src="assets/images/hangman.jpg"></div>
+									<div class="col s4"><img data-target="modal2" data-link="https://tunkytime.github.io/unit-4-game-Crystals/" class="modal-trigger responsive-img" src="assets/images/crystal.jpg"></div>
+									<div class="col s4"><img data-target="modal3" data-link="https://tunkytime.github.io/unit-4-game-RPG/" class="modal-trigger responsive-img" src="assets/images/rpg.jpg"></div>
 								</div>
-								<div class="row">
-									<div class="col s4"><img class="responsive-img animated lightSpeedIn faster delay-2s" src="assets/images/triva.jpg"></div>
-									<div class="col s4"><img class="responsive-img animated lightSpeedIn fast delay-2s" src="assets/images/gif.gif" width="400"></div>
-									<div class="col s4"><img class="responsive-img animated lightSpeedIn delay-2s" src="assets/images/project.jpg"></div>
+								<div class="row animated lightSpeedIn delay-1s fast">
+									<div class="col s4"><img data-target="modal4" data-link="https://tunkytime.github.io/TriviaGame/" class="modal-trigger responsive-img" src="assets/images/triva.jpg"></div>
+									<div class="col s4"><img data-tagert="modal5" data-link="https://tunkytime.github.io/GifTastic/" class="modal-trigger responsive-img" src="assets/images/gif.gif" width="400"></div>
+									<div class="col s4"><img data-target="modal6" data-link="https://tubidge.github.io/Project-One/home.html" class="modal-trigger responsive-img" src="assets/images/project.jpg"></div>
 								</div>
 							</div>
 						</div>
@@ -104,15 +108,14 @@
 			</div>
 		</div>
 	</main>
-
+	
 	<!-- Modal Structure -->
-	<div id="modal1" class="modal">
-		<div class="modal-content center-align">
-			<img src="assets/images/crystal.jpg">
-			<p>I am a very simple card. I am good at containing small bits of information.</p>
-			<a href="#">This is a link</a>
-		</div>
-	</div>
+	<div id="modal1" class="modal"></div>
+	<div id="modal2" class="modal"></div>
+	<div id="modal3" class="modal"></div>
+	<div id="modal4" class="modal"></div>
+	<div id="modal5" class="modal"></div>
+	<div id="modal6" class="modal"></div>
 
     <script type="text/javascript" src="assets/javascript/logic.js"></script>
 </body>

@@ -18,7 +18,8 @@ $(document).ready(function () {
 	// MAIN PROCESS
 	// ============================================	
 	home.addClass('animated rollIn fast').show();
-	$('.tagline').addClass('animated rubberBand fast');
+	$('.tagline').addClass('animated rubberBand').show();
+	setTimeout(changeFont, 1400);
 	
 	// MOUSE OVER EVENTS
 	$('.nav-icon').mouseover(function(event) {
@@ -78,8 +79,11 @@ $(document).ready(function () {
 		home.show();
 	});	
 	
-	$('.responsive-img').on('click', function () {
-		
+	$(document).on('click', '.responsive-img', function () {
+		var link = $(this).data('link');
+		var url = $(this).attr('src');
+		var modal = $(this).data('target');
+		showModal(link, url, modal);
 	});
 	
 	$(document).on('click', '.nav-icon, .nav-name', showSection);
@@ -114,15 +118,18 @@ $(document).ready(function () {
 		cLink.html(cLink.data('icon')).addClass('material-icons').removeClass('menu-text');
 	};
 	
-	function createImageCard (name) {
-		var cardDiv = $(`<div class="card preview-card"></div>`);
-		var cardImg = $(`<img src="">`);
-		var imgDiv = $(`<div class="card-image"></div>`).html(cardImg);
-		var cardTitle = $(`<span class="card-title">${name}</span>`);
-		var cardContent = $(`<div class="card-content">Content</div>`);
-		cardDiv.append(imgDiv, cardTitle, cardContent);
-		cardDiv.css('width', '20rem');
-		return cardDiv;
+	function showModal (link, url, modal) {	
+		var content = $('<div>').addClass('modal-content center-align');
+		var img = $(`<img src="${url}">`).addClass('z-depth-3');
+		var p = $('<p>').text('sample text');
+		var a = $(`<a href="${link}" target="_blank"></a>`).addClass('waves-effect waves-light btn');
+		a.html('<i class="material-icons right">open_in_new</i>View');
+		content.append(img, p, a);
+		 $(`#${modal}`).html(content);
+	};
+	
+	function changeFont () {
+		$('.tagline').addClass('fun-font');
 	};
 });
 
