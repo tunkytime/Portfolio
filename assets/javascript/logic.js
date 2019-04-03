@@ -8,68 +8,110 @@ $(document).ready(function () {
 	var skills = $('#skillspage');
 	var port = $('#portpage');
 	var contact = $('#contactpage');
-
-	// MAIN PROCESS
-	// ============================================
-	home.fadeIn(3000);
 	
+	var hLink = $('#home');
+	var aLink = $('#about');
+	var sLink = $('#skills');
+	var pLink = $('#portfolio');
+	var cLink = $('#contact');
+	
+	// MAIN PROCESS
+	// ============================================	
+	home.addClass('animated rollIn fast').show();
+	$('.tagline').addClass('animated rubberBand fast');
+	
+	// MOUSE OVER EVENTS
 	$('.nav-icon').mouseover(function(event) {
 		var title = $(this).data('name');
 		$(this).html(title).addClass('menu-text').removeClass('material-icons');
 	}).mouseout(function(){
 		if ($(this).hasClass('selected')) {
-			var title = $(this).data('name');
+			title = $(this).data('name');
 			$(this).html(title);
 		} else {
 			var icon = $(this).data('icon');
 			$(this).html(icon).removeClass('menu-text').addClass('material-icons');
 		};
 	});
+	
+	$('.nav-name').mouseover(function(event) {
+		var title = $(this).data('line');
+		$(this).html(title);
+	}).mouseout(function(){
+		if ($(this).hasClass('selected')) {
+			title = $(this).data('line');
+			$(this).html(title);
+		} else {
+			var name = $(this).data('name');
+			$(this).html(name);
+		};
+	});
+	
+	$('.responsive-img').mouseover(function(event) {
+		$(this).addClass('jello').removeClass('lightSpeedIn slow slower fast faster delay-1s delay-2s');
+	}).mouseout(function(){
+		$(this).removeClass('jello');
+	});
 
 	// CLICK EVENTS
-	// ============================================
 	$('.nav-icon').on('click', function() {;
 		$('.nav-icon').removeClass('selected');
-		$('#about').html($('#about').data('icon')).addClass('material-icons').removeClass('menu-text');
-		$('#skills').html($('#skills').data('icon')).addClass('material-icons').removeClass('menu-text');
-		$('#portfolio').html($('#portfolio').data('icon')).addClass('material-icons').removeClass('menu-text');
-		$('#contact').html($('#contact').data('icon')).addClass('material-icons').removeClass('menu-text');
+		hideNavItems();
 		var title = $(this).data('name');
 		$(this).addClass('selected').html(title).addClass('menu-text').removeClass('material-icons');
 	});
 	
+	$('.nav-name').on('click', function() {;
+		$('.nav-name').removeClass('selected');
+		$('#about-side').html($('#about-side').data('name'));
+		$('#skills-side').html($('#skills-side').data('name'));
+		$('#port-side').html($('#port-side').data('name'));
+		$('#contact-side').html($('#contact-side').data('name'));
+		var title = $(this).data('line');
+		$(this).addClass('selected').html(title);
+	});
+	
 	$('#home').on('click', function () {
 		$('.nav-icon').removeClass('selected');
-		$('#about').html($('#about').data('icon')).addClass('material-icons').removeClass('menu-text');
-		$('#skills').html($('#skills').data('icon')).addClass('material-icons').removeClass('menu-text');
-		$('#portfolio').html($('#portfolio').data('icon')).addClass('material-icons').removeClass('menu-text');
-		$('#contact').html($('#contact').data('icon')).addClass('material-icons').removeClass('menu-text');
+		hideNavItems();
 		$('section').hide();
-		home.addClass('transition').show();
+		home.show();
 	});	
 	
-	$(document).on('click', 'nav a', showSection);
+	$('.responsive-img').on('click', function () {
+		
+	});
+	
+	$(document).on('click', '.nav-icon, .nav-name', showSection);
 
 	// FUNCTIONS
 	// ============================================
 	function showSection () {
 		var linkName = $(this).data('name');
-		$('section').hide();
+		$('section').addClass('animated fast').hide();
+		
 		if (linkName === 'Home') {
-			home.addClass('transition').show();
+			home.addClass('bounceInDown').show();
 		};
 		if (linkName === 'About') {
-			about.addClass('transition').show();
+			about.addClass('bounceInDown').show();
 		};
 		if (linkName === 'Skills') {
-			skills.addClass('transition').show();
+			skills.addClass('bounceInDown').show();
 		};
 		if (linkName === 'Portfolio') {
-			port.addClass('transition').show();
+			port.addClass('bounceInDown').show();
 		};
 		if (linkName === 'Contact') {
-			contact.addClass('transition').show();
+			contact.addClass('bounceInDown').show();
 		};
+	};
+	
+	function hideNavItems () {
+		aLink.html(aLink.data('icon')).addClass('material-icons').removeClass('menu-text');
+		sLink.html(sLink.data('icon')).addClass('material-icons').removeClass('menu-text');
+		pLink.html(pLink.data('icon')).addClass('material-icons').removeClass('menu-text');
+		cLink.html(cLink.data('icon')).addClass('material-icons').removeClass('menu-text');
 	};
 	
 	function createImageCard (name) {

@@ -21,6 +21,18 @@ html {
 body {
 	font-family: 'Rubik', sans-serif;
 	color: #fff
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+	color: #fff;
+}
+
+.tagline {
+  animation-delay: .7s;
 }
 
 /* ===PRIMARY=== */
@@ -29,66 +41,78 @@ body {
 	display: none;	
 }
 
-.transition {
-  -webkit-animation-name: cssTransition;
-  -webkit-animation-duration: .5s;
+.modal {
+	max-height: 100%;
 }
 
-@-webkit-keyframes cssTransition {
-  from {
-    -webkit-transform: scale(1.4) skew(0deg);
-  }
-  to {
-    -webkit-transform: scale(1) skew(0deg);
-  }
+.modal img {
+	width: 80% !important;
 }
 
-/* ===SIDEBAR=== */
+/* ===NAVBAR=== */
 
 nav {
-    height: 100%;
-	width: 60px;
-	position: fixed;
-	top: 0;
-	left: 0;
 	background-color: #000;
-	color: white;
+	color: #fff;
+	letter-spacing: 0.7px;
 }
 
-#home {
+nav .brand-logo {
+	padding-left: 5px;
 	font-family: 'Luckiest Guy', cursive;
-	font-size: 2.5em;
 }
 
-#home:hover {
+nav .brand-logo:hover {
 	color: #4F55F9;
 }
 
-.nav-icon {
-	padding: 10px 3px 10px 0px;
-	display: block;
+nav .nav-icon {
+	padding: 18px;
 	color: #818181;
 	transition: transform .2s ease-in-out;
 }
 
-.nav-icon:hover,
-.nav-icon:focus {
+nav .nav-icon:hover,
+nav .nav-icon:focus,
+nav .nav-icon:active {
+	font-family: 'Luckiest Guy', cursive;
 	color: #fff;
 	transform: rotate(360deg);
 	/* Permalink - http://colorzilla.com/gradient-editor/#7e5cf9+0,000000+100&0.7+0,0+99 */
-	background: -webkit-linear-gradient(-45deg, rgba(79,85,249,0.7) 0%,rgba(1,2,2,0) 70%,rgba(0,0,0,0) 100%);
+	background: -webkit-linear-gradient(45deg, rgba(79,85,249,0.7) 0%,rgba(1,2,2,0) 70%,rgba(0,0,0,0) 100%);
 }
 
-.selected {
-	color: #fff;
-	transform: rotate(360deg);
-	/* Permalink - http://colorzilla.com/gradient-editor/#7e5cf9+0,000000+100&0.7+0,0+99 */
-	background: -webkit-linear-gradient(-45deg, rgba(79,85,249,0.7) 0%,rgba(1,2,2,0) 70%,rgba(0,0,0,0) 100%);
-}
-
-.menu-text {
-	font-size: .75em;
+nav .menu-text {
+	font-size: .9em;
     line-height: 2;
+}
+
+
+nav .selected {
+	font-family: 'Luckiest Guy', cursive;
+	color: #fff;
+	transform: rotate(360deg);
+	/* Permalink - http://colorzilla.com/gradient-editor/#7e5cf9+0,000000+100&0.7+0,0+99 */
+	background: -webkit-linear-gradient(-45deg, rgba(79,85,249,0.7) 0%,rgba(1,2,2,0) 70%,rgba(0,0,0,0) 100%);
+}
+
+/* ===SIDENAV=== */
+
+.sidenav {
+	letter-spacing: .7px;
+	background: -webkit-linear-gradient(0deg, rgba(126,92,249,1) 0%,rgba(1,1,2,.9) 100%);
+}
+
+.sidenav li a {
+	color: #fff;
+}
+
+.sidenav .nav-name:hover,
+.sidenav .nav-name:focus,
+.sidenav .nav-name:active {
+	font-family: 'Luckiest Guy', cursive;
+	color: #fff;
+	background: -webkit-linear-gradient(-45deg, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 99%,rgba(0,0,0,0) 100%);
 }
 
 /* ===FOOTER=== */

@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Pacifico|Rubik" rel="stylesheet">
 
     <!-- Compiled and minified CSS - Materialize -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
     <!-- Compiled and minified JavaScript - Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -23,76 +23,96 @@
 </head>
 
 <body>
-    <nav class="center-align stroke">
-        <a href="#" id="home" data-name="Home">A</a>
-        <a href="#" id="about" class="material-icons nav-icon" data-name="About" data-icon="person_outline">person_outline</a>
-        <a href="#" id="skills" class="material-icons nav-icon" data-name="Skills" data-icon="mode_edit">mode_edit</a>
-        <a href="#" id="portfolio" class="material-icons nav-icon" data-name="Portfolio" data-icon="apps">apps</a>
-        <a href="#" id="contact" class="material-icons nav-icon" data-name="Contact" data-icon="mail_outline">mail_outline</a>
-    </nav>
-
-    <div class="container">
-		<div class="row">
-			<div class="col s12">
-			
-				<div class="progress hidden">
-					<div class="indeterminate"></div>
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<a href="#!" id="home" class="brand-logo tooltipped" data-position="bottom" data-tooltip="Go to homepage" data-name="Home">Logo</a>
+				<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+				<ul class="right hide-on-med-and-down" style="margin-right: 10px">
+					<li><a href="#" id="about" class="material-icons nav-icon" data-name="About" data-icon="person_outline">person_outline</a></li>
+					<li><a href="#" id="skills" class="material-icons nav-icon" data-name="Skills" data-icon="mode_edit">mode_edit</a></li>
+					<li><a href="#" id="portfolio" class="material-icons nav-icon" data-name="Portfolio" data-icon="apps">apps</a></li>
+					<li><a href="#" id="contact" class="material-icons nav-icon" data-name="Contact" data-icon="mail_outline">mail_outline</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	
+	<ul class="sidenav" id="mobile-demo">
+		<li><a href="#" id="about-side" class="nav-name" data-line="About Me" data-name="About">About</a></li>
+		<li><a href="#" id="skills-side" class="nav-name" data-line="Things I Know" data-name="Skills">Skills</a></li>
+		<li><a href="#" id="port-side" class="nav-name" data-line="Stuff I've Done" data-name="Portfolio">Portfolio</a></li>
+		<li><a href="#" id="contact-side" class="nav-name" data-line="Contact Me" data-name="Contact">Contact</a></li>
+	</ul>
+	
+	<main>
+		<div class="container">
+			<div class="row">
+				<div class="col s12">
+					<!-- Home Page -->
+					<section id="homepage" class="hidden">
+						<div class="row">
+							<div class="col s12">
+								<h1>Home</h1>
+								<h5 class="tagline">I'm Alex, the App Creator.</h5>
+							</div>
+						</div>
+					</section>
+					<!-- About Page -->
+					<section id="aboutpage" class="hidden">
+						<div class="row">
+							<div class="col s12">
+								<h1>About</h1>
+							</div>
+						</div>
+					</section>
+					<!-- Skills Page -->
+					<section id="skillspage" class="hidden">
+						<div class="row">
+							<div class="col s12">
+								<h1>Skills</h1>
+							</div>
+						</div>
+					</section>
+					<!-- Portfolio Page -->
+					<section id="portpage" class="hidden">
+						<div class="row">
+							<div class="col s12">
+								<h1>Portfolio</h1>
+								<div class="row">
+									<div class="col s4"><img class="responsive-img animated lightSpeedIn faster delay-1s" src="assets/images/hangman.jpg"></div>
+									<div class="col s4"><img data-target="modal1" class="modal-trigger responsive-img animated lightSpeedIn fast delay-1s" src="assets/images/crystal.jpg"></div>
+									<div class="col s4"><img class="responsive-img animated lightSpeedIn delay-1s" src="assets/images/rpg.jpg"></div>
+								</div>
+								<div class="row">
+									<div class="col s4"><img class="responsive-img animated lightSpeedIn faster delay-2s" src="assets/images/triva.jpg"></div>
+									<div class="col s4"><img class="responsive-img animated lightSpeedIn fast delay-2s" src="assets/images/gif.gif" width="400"></div>
+									<div class="col s4"><img class="responsive-img animated lightSpeedIn delay-2s" src="assets/images/project.jpg"></div>
+								</div>
+							</div>
+						</div>
+					</section>  
+					<!-- Contact Page -->
+					<section id="contactpage" class="hidden">
+						<div class="row">
+							<div class="col s12">
+								<h1>Contact</h1>
+							</div>
+						</div>
+					</section>
 				</div>
-				
-				<section id="homepage" class="hidden">
-					<div class="row">
-						<div class="col s12">
-							<h1>Home</h1>
-							<h5>I'm Alex, the App Creator.</h5>
-						</div>
-					</div>
-				</section>
-				
-				<section id="aboutpage" class="hidden">
-					<div class="row">
-						<div class="col s12">
-							<h1>About</h1>
-						</div>
-					</div>
-				</section>
-				
-				<section id="skillspage" class="hidden">
-					<div class="row">
-						<div class="col s12">
-							<h1>Skills</h1>
-						</div>
-					</div>
-				</section>
-						
-				<section id="portpage" class="hidden">
-					<div class="row">
-						<div class="col s12">
-							<h1>Portfolio</h1>
-							<div class="row">
-								<div class="col s4"></div>
-								<div class="col s4"></div>
-								<div class="col s4"></div>
-							</div>
-							<div class="row">
-								<div class="col s4"></div>
-								<div class="col s4"></div>
-								<div class="col s4"></div>
-							</div>
-						</div>
-					</div>
-				</section>  
-				
-				<section id="contactpage" class="hidden">
-					<div class="row">
-						<div class="col s12">
-							<h1>Contact</h1>
-						</div>
-					</div>
-				</section>
-				
 			</div>
 		</div>
-    </div>
+	</main>
+
+	<!-- Modal Structure -->
+	<div id="modal1" class="modal">
+		<div class="modal-content center-align">
+			<img src="assets/images/crystal.jpg">
+			<p>I am a very simple card. I am good at containing small bits of information.</p>
+			<a href="#">This is a link</a>
+		</div>
+	</div>
 
     <script type="text/javascript" src="assets/javascript/logic.js"></script>
 </body>
