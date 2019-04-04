@@ -18,10 +18,13 @@ $(document).ready(function () {
 	// MAIN PROCESS
 	// ============================================	
 	home.addClass('animated rollIn fast').show();
-	$('.tagline').addClass('animated rubberBand').show();
+	$('.title').addClass('animated rubberBand').show();
+	$('.tagline').addClass('animated fadeIn').show();
 	setTimeout(changeFont, 1400);
 	
 	// MOUSE OVER EVENTS
+
+	// Toggle nav text
 	$('.nav-icon').mouseover(function(event) {
 		var title = $(this).data('name');
 		$(this).html(title).addClass('menu-text').removeClass('material-icons');
@@ -35,6 +38,7 @@ $(document).ready(function () {
 		};
 	});
 	
+	// Toggle sidenav text
 	$('.nav-name').mouseover(function(event) {
 		var title = $(this).data('line');
 		$(this).html(title);
@@ -48,20 +52,24 @@ $(document).ready(function () {
 		};
 	});
 	
+	// Animate project image
 	$('.responsive-img').mouseover(function(event) {
-		$(this).addClass('jello').removeClass('lightSpeedIn slow slower fast faster delay-1s delay-2s');
+		$(this).addClass('animated jello faster').removeClass('lightSpeedIn slow slower fast faster delay-1s delay-2s');
 	}).mouseout(function(){
 		$(this).removeClass('jello');
 	});
 
 	// CLICK EVENTS
+	
+	// Change nav item text
 	$('.nav-icon').on('click', function() {;
 		$('.nav-icon').removeClass('selected');
-		hideNavItems();
+		revertNavItems();
 		var title = $(this).data('name');
 		$(this).addClass('selected').html(title).addClass('menu-text').removeClass('material-icons');
 	});
 	
+	// Change sidebar item text
 	$('.nav-name').on('click', function() {;
 		$('.nav-name').removeClass('selected');
 		$('#about-side').html($('#about-side').data('name'));
@@ -74,18 +82,22 @@ $(document).ready(function () {
 	
 	$('#home').on('click', function () {
 		$('.nav-icon').removeClass('selected');
-		hideNavItems();
+		revertNavItems();
 		$('section').hide();
 		home.show();
 	});	
 	
+	// Display modal of project
 	$(document).on('click', '.responsive-img', function () {
+		var title = $(this).data('title');
 		var link = $(this).data('link');
+		var link2 = $(this).data('code');
 		var url = $(this).attr('src');
 		var modal = $(this).data('target');
-		showModal(link, url, modal);
+		showModal(title, link, link2, url, modal);
 	});
 	
+	// Display referenced section
 	$(document).on('click', '.nav-icon, .nav-name', showSection);
 
 	// FUNCTIONS
@@ -106,30 +118,29 @@ $(document).ready(function () {
 		if (linkName === 'Portfolio') {
 			port.addClass('bounceInDown').show();
 		};
-		if (linkName === 'Contact') {
-			contact.addClass('bounceInDown').show();
-		};
 	};
 	
-	function hideNavItems () {
+	function revertNavItems () {
 		aLink.html(aLink.data('icon')).addClass('material-icons').removeClass('menu-text');
 		sLink.html(sLink.data('icon')).addClass('material-icons').removeClass('menu-text');
 		pLink.html(pLink.data('icon')).addClass('material-icons').removeClass('menu-text');
 		cLink.html(cLink.data('icon')).addClass('material-icons').removeClass('menu-text');
 	};
 	
-	function showModal (link, url, modal) {	
+	function showModal (title, link, link2, url, modal) {	
 		var content = $('<div>').addClass('modal-content center-align');
-		var img = $(`<img src="${url}">`).addClass('z-depth-3');
-		var p = $('<p>').text('sample text');
-		var a = $(`<a href="${link}" target="_blank"></a>`).addClass('waves-effect waves-light btn');
-		a.html('<i class="material-icons right">open_in_new</i>View');
-		content.append(img, p, a);
+		var img = $(`<img src="${url}">`).addClass('z-depth-3 rounded');
+		var t = $('<h4>').text(title);
+		var a = $(`<a href="${link}" target="_blank" style="margin-left: 15px"></a>`).addClass('waves-effect waves-light btn modal-btn');
+		a.html('View Demo<i class="fas fa-laptop" style="margin-left: 10px"></i>');
+		var a2 = $(`<a href="${link2}" target="_blank" style="margin-left: 15px"></a>`).addClass('waves-effect waves-light btn modal-btn');
+		a2.html('View Code<i class="fas fa-laptop-code" style="margin-left: 10px"></i>');
+		content.append(img, a2, a);
+		content.prepend(t);
 		 $(`#${modal}`).html(content);
 	};
 	
 	function changeFont () {
-		$('.tagline').addClass('fun-font');
+		$('.title').addClass('fun-font');
 	};
 });
-

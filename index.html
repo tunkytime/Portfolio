@@ -5,23 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Pacifico|Rubik" rel="stylesheet">
-
-    <!-- Compiled and minified CSS - Materialize -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	
+    <!-- Fonts & Animations -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Pacifico|Rubik">
 	<!-- https://github.com/daneden/animate.css -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	
+	<!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Compiled and minified JavaScript - Materialize -->
+    <!-- JavaScript & jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <!-- Compiled and minified jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	
     <title>Portfolio</title>
 </head>
 
@@ -35,7 +34,7 @@
 					<li><a href="#" id="about" class="material-icons nav-icon" data-name="About" data-icon="person_outline">person_outline</a></li>
 					<li><a href="#" id="skills" class="material-icons nav-icon" data-name="Skills" data-icon="mode_edit">mode_edit</a></li>
 					<li><a href="#" id="portfolio" class="material-icons nav-icon" data-name="Portfolio" data-icon="apps">apps</a></li>
-					<li><a href="#" id="contact" class="material-icons nav-icon" data-name="Contact" data-icon="mail_outline">mail_outline</a></li>
+					<li><a href="mailto:schaaf1091@gmail.com" id="contact" class="material-icons nav-icon" data-name="Contact" data-icon="mail_outline">mail_outline</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -45,7 +44,7 @@
 		<li><a href="#" id="about-side" class="nav-name" data-line="About Me" data-name="About">About</a></li>
 		<li><a href="#" id="skills-side" class="nav-name" data-line="Things I Know" data-name="Skills">Skills</a></li>
 		<li><a href="#" id="port-side" class="nav-name" data-line="Stuff I've Done" data-name="Portfolio">Portfolio</a></li>
-		<li><a href="#" id="contact-side" class="nav-name" data-line="Contact Me" data-name="Contact">Contact</a></li>
+		<li><a href="mailto:schaaf1091@gmail" id="contact-side" class="nav-name" data-line="Contact Me" data-name="Contact">Contact</a></li>
 	</ul>
 	
 	<main>
@@ -56,9 +55,8 @@
 					<section id="homepage" class="hidden">
 						<div class="row">
 							<div class="col s12">
-								<h1>Greetings!</h1>
-								<h4>I'm Alex,</h4>
-								<h4 class="tagline hidden">the App Creator.</h4>
+								<h1 class="title hidden">Apps <span class="small-text">by</span> Alex</h1>
+								<h4 class="tagline hidden">Web Development & Design</h4>
 							</div>
 						</div>
 					</section>
@@ -66,9 +64,39 @@
 					<section id="aboutpage" class="hidden">
 						<div class="row">
 							<div class="col s12">
-								<h1>About</h1>
+								<div class="row valign-wrapper">
+									<div class="col s4 center-align">
+										<img src="https://via.placeholder.com/150x175">
+									</div>
+									<div class="col s8">
+										<p class="center-align">College</p>
+									</div>
+								</div>
+								<div class="row valign-wrapper">
+									<div class="col s8">
+										<p class="center-align">Early Career</p>
+									</div>
+									<div class="col s4 center-align">
+										<img src="https://via.placeholder.com/150x175">
+									</div>
+								</div>
+								<div class="row valign-wrapper">
+									<div class="col s4 center-align">
+										<img src="https://via.placeholder.com/150x175">
+									</div>
+									<div class="col s8">
+										<p class="center-align">Entrepreneur</p>
+									</div>
+								</div>
+								<div class="row valign-wrapper">
+									<div class="col s8">
+										<p class="center-align">Web Developer</p>
+									</div>
+									<div class="col s4 center-align">
+										<img src="https://via.placeholder.com/150x175">
+									</div>
+								</div>
 							</div>
-						</div>
 					</section>
 					<!-- Skills Page -->
 					<section id="skillspage" class="hidden">
@@ -84,31 +112,33 @@
 							<div class="col s12">
 								<h1>Portfolio</h1>
 								<div class="row animated lightSpeedIn delay-1s fast">
-									<div class="col s4"><img data-target="modal1" data-link="https://tunkytime.github.io/Word-Guess-Game/" class="modal-trigger responsive-img" src="assets/images/hangman.jpg"></div>
-									<div class="col s4"><img data-target="modal2" data-link="https://tunkytime.github.io/unit-4-game-Crystals/" class="modal-trigger responsive-img" src="assets/images/crystal.jpg"></div>
-									<div class="col s4"><img data-target="modal3" data-link="https://tunkytime.github.io/unit-4-game-RPG/" class="modal-trigger responsive-img" src="assets/images/rpg.jpg"></div>
+									<div class="col s4"><img data-title="Hangman in Space - Game" data-target="modal1" data-link="https://tunkytime.github.io/Word-Guess-Game/" data-code="https://github.com/tunkytime/Word-Guess-Game.git" class="modal-trigger responsive-img" src="assets/images/hangman.jpg"></div>
+									<div class="col s4"><img data-title="Crystal Collector - Game" data-target="modal2" data-link="https://tunkytime.github.io/unit-4-game-Crystals/" data-code="https://github.com/tunkytime/unit-4-game-Crystals.git" class="modal-trigger responsive-img" src="assets/images/crystal.jpg"></div>
+									<div class="col s4"><img data-title="RPG - Game" data-target="modal3" data-link="https://tunkytime.github.io/unit-4-game-RPG/" data-code="https://github.com/tunkytime/unit-4-game-RPG.git" class="modal-trigger responsive-img" src="assets/images/rpg.jpg"></div>
 								</div>
 								<div class="row animated lightSpeedIn delay-1s fast">
-									<div class="col s4"><img data-target="modal4" data-link="https://tunkytime.github.io/TriviaGame/" class="modal-trigger responsive-img" src="assets/images/triva.jpg"></div>
-									<div class="col s4"><img data-tagert="modal5" data-link="https://tunkytime.github.io/GifTastic/" class="modal-trigger responsive-img" src="assets/images/gif.gif" width="400"></div>
-									<div class="col s4"><img data-target="modal6" data-link="https://tubidge.github.io/Project-One/home.html" class="modal-trigger responsive-img" src="assets/images/project.jpg"></div>
+									<div class="col s4"><img data-title="Movie Trivia - Game" data-target="modal4" data-link="https://tunkytime.github.io/TriviaGame/" data-code="https://github.com/tunkytime/TriviaGame.git" class="modal-trigger responsive-img" src="assets/images/triva.jpg"></div>
+									<div class="col s4"><img data-title="GifTastic - App" data-tagert="modal5" data-link="https://tunkytime.github.io/GifTastic/" data-code="https://github.com/tunkytime/GifTastic.git" class="modal-trigger responsive-img" src="assets/images/gif.gif" width="400"></div>
+									<div class="col s4"><img data-title="Your Next Destination - App" data-target="modal6" data-link="https://tubidge.github.io/Project-One/home.html" data-code="https://github.com/tubidge/Project-One.git" class="modal-trigger responsive-img" src="assets/images/project.jpg"></div>
 								</div>
 							</div>
 						</div>
 					</section>  
-					<!-- Contact Page -->
-					<section id="contactpage" class="hidden">
-						<div class="row">
-							<div class="col s12">
-								<h1>Contact</h1>
-							</div>
-						</div>
-					</section>
 				</div>
+			</div>
+			<div class="fixed-action-btn">
+				<a class="btn-floating btn-large custom-purple">
+					<i class="fas fa-link"></i>
+				</a>
+			<ul>
+				<li><a href="https://github.com/tunkytime" target="_blank" class="btn-floating waves-effect waves-light custom-purple"><i class="fab fa-github"></i></a></li>
+				<li><a href="https://www.linkedin.com/in/alexander-schaaf/" target="_blank" class="btn-floating waves-effect waves-light custom-purple"><i class="fab fa-linkedin-in"></i></a></li>
+				<li><a href="assets/docs/resume-schaaf.pdf" target="_blank" data-tooltip="Download my resume" data-position="left" class="btn-floating waves-effect waves-light custom-purple tooltipped"><i class="fas fa-file"></i></a></li>
+			</ul>
 			</div>
 		</div>
 	</main>
-	
+
 	<!-- Modal Structure -->
 	<div id="modal1" class="modal"></div>
 	<div id="modal2" class="modal"></div>
