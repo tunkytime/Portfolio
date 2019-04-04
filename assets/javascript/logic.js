@@ -54,9 +54,9 @@ $(document).ready(function () {
 	
 	// Animate project image
 	$('.responsive-img').mouseover(function(event) {
-		$(this).addClass('animated jello faster').removeClass('lightSpeedIn slow slower fast faster delay-1s delay-2s');
+		$(this).addClass('animated jello faster').removeClass('lightSpeedIn slow slower fast faster delay-1s delay-2s').css('opacity', '1');
 	}).mouseout(function(){
-		$(this).removeClass('jello');
+		$(this).removeClass('jello').css('opacity', '.8');
 	});
 
 	// CLICK EVENTS
@@ -129,10 +129,10 @@ $(document).ready(function () {
 	
 	function showModal (title, link, link2, url, modal) {	
 		var content = $('<div>').addClass('modal-content center-align');
-		var img = $(`<img src="${url}">`).addClass('z-depth-3 rounded');
+		var img = $(`<img src="${url}" class="z-depth-4"><br>`);
 		var t = $('<h4>').text(title);
 		var a = $(`<a href="${link}" target="_blank" style="margin-left: 15px"></a>`).addClass('waves-effect waves-light btn modal-btn');
-		a.html('View Demo<i class="fas fa-laptop" style="margin-left: 10px"></i>');
+		a.html('Demo<i class="fas fa-laptop" style="margin-left: 10px"></i>');
 		var a2 = $(`<a href="${link2}" target="_blank" style="margin-left: 15px"></a>`).addClass('waves-effect waves-light btn modal-btn');
 		a2.html('View Code<i class="fas fa-laptop-code" style="margin-left: 10px"></i>');
 		content.append(img, a2, a);
