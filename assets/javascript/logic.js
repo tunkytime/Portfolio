@@ -87,6 +87,10 @@ $(document).ready(function () {
 		home.show();
 	});	
 	
+	$('#skillspage a').on('click', function () {
+		$('.test').addClass('grey-text').html('This was created using JavaScript.').toggle();
+	});
+	
 	// Display modal of project
 	$(document).on('click', '.responsive-img', function () {
 		var title = $(this).data('title');
@@ -110,7 +114,7 @@ $(document).ready(function () {
 			home.addClass('bounceInDown').show();
 		};
 		if (linkName === 'About') {
-			about.addClass('bounceInDown').show();
+			about.addClass('bounceInUp').show();
 		};
 		if (linkName === 'Skills') {
 			skills.addClass('bounceInDown').show();

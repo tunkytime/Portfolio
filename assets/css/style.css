@@ -55,7 +55,6 @@ main {
 
 .fun-font {
 	font-family: 'Luckiest Guy', cursive;
-	font-size: 4.7em;
 	background: -webkit-linear-gradient(-45deg, rgba(126,92,249,1) 0%,rgba(14,204,197,1) 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -63,10 +62,6 @@ main {
 
 .fun {
 	font-family: 'Luckiest Guy', cursive;
-}
-
-.custom-purple-text {
-	color: #4F55F9;
 }
 
 .btn {
@@ -85,84 +80,6 @@ main {
 
 .modal-btn:hover {
 	color: #000;
-}
-
-/* PRIMARY =========
-================== */
-.hidden {
-	display: none;	
-}
-
-.name {
-  animation-delay: .7s;
-}
-
-.title {
-  animation-delay: 1s;
-}
-
-.small-text {
-	font-size: .7em;
-}
-
-.tagline {
-  animation-delay: 1.5s;
-}
-
-#aboutpage .section {
-	opacity: .9;
-	height: 250px;
-}
-
-#aboutpage .section p {
-	font-size: 1.2em;
-}
-
-#aboutpage .section span {
-	letter-spacing: 1px;
-}
-
-.college {
-	background: -webkit-linear-gradient(-90deg, rgba(79,85,249,0.7) 20%,rgba(0,0,0,0) 100%);
-}
-
-.career {
-	background: -webkit-linear-gradient(-90deg, rgba(39,214,195,0.5) 0%,rgba(0,0,0,0) 70%);
-}
-
-.business {
-	background: -webkit-linear-gradient(-90deg, rgba(79,85,249,0.7) 20%,rgba(0,0,0,0) 100%);
-}
-
-.developer {
-	background: -webkit-linear-gradient(-90deg, rgba(39,214,195,0.5) 0%,rgba(0,0,0,0) 70%);
-}
-
-.responsive-img {
-	opacity: .8;
-}
-
-.modal {
-	max-height: 100%;
-}
-
-.modal img {
-	width: 70% !important;
-}
-
-.hover-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #555;
-  color: white;
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
 }
 
 /* NAVBAR =========
@@ -233,4 +150,113 @@ nav .selected {
 	font-family: 'Luckiest Guy', cursive;
 	color: #fff;
 	background: -webkit-linear-gradient(-45deg, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 99%,rgba(0,0,0,0) 100%);
+}
+
+
+/* PRIMARY =========
+================== */
+.hidden {
+	display: none;	
+}
+
+/* Home Page */
+.name {
+  animation-delay: .7s;
+}
+
+.title {
+  animation-delay: 1s;
+}
+
+.small-text {
+	font-size: .5em;
+}
+
+.tagline {
+  animation-delay: 1.5s;
+}
+
+/* Skills Page */
+#skillspage a {
+	color: #27D6C3;
+}
+
+#skillspage a:hover {
+	font-family: 'Luckiest Guy', cursive;
+	letter-spacing: 1px;
+}
+
+/* About Page */
+#aboutpage .section {
+	opacity: .9;
+}
+
+#aboutpage .section p {
+	font-size: 1.3em;
+}
+
+#aboutpage .section span {
+	letter-spacing: 1px;
+}
+
+.college {
+	/*background: -webkit-linear-gradient(-90deg, rgba(39,214,195,0.5) 20%,rgba(0,0,0,0) 100%);*/
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(39,214,195,0.7) 0%,rgba(0,0,0,0) 70%);
+}
+
+.career {
+	/*background: -webkit-linear-gradient(-90deg, rgba(79,85,249,0.5) 0%,rgba(0,0,0,0) 70%);*/
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(79,85,249,0.7) 0%,rgba(0,0,0,0) 70%);
+}
+
+.business {
+	/*background: -webkit-linear-gradient(-90deg, rgba(39,214,195,0.5) 20%,rgba(0,0,0,0) 100%);*/
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(39,214,195,0.7) 0%,rgba(0,0,0,0) 70%);
+}
+
+.developer {
+	margin-bottom: 30px;
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 70%);
+}
+
+.developer .webdev {
+	font-size: 1.6em;
+	background: -webkit-linear-gradient(-45deg, rgba(126,92,249,1) 0%,rgba(14,204,197,1) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/* Portfolio Page */
+.responsive-img {
+	opacity: .8;
+}
+
+.modal {
+	max-height: 100%;
+}
+
+.modal img {
+	width: 70% !important;
+}
+
+.hover-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Change h1 sizing on mobile for better fit */
+@media only screen and (max-width: 400px) {
+  #homepage h1 {
+    font-size: 3.9em;
+  }
 }
