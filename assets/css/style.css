@@ -25,7 +25,7 @@ html {
 
 body {
 	font-family: 'Rubik', sans-serif;
-	color: #fff
+	color: #fff !important;
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
@@ -59,6 +59,14 @@ main {
 	background: -webkit-linear-gradient(-45deg, rgba(126,92,249,1) 0%,rgba(14,204,197,1) 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+}
+
+.fun {
+	font-family: 'Luckiest Guy', cursive;
+}
+
+.custom-purple-text {
+	color: #4F55F9;
 }
 
 .btn {
@@ -101,9 +109,33 @@ main {
   animation-delay: 1.5s;
 }
 
-.timeline {
-	height: 400px;
-	background: red;
+#aboutpage .section {
+	opacity: .9;
+	height: 250px;
+}
+
+#aboutpage .section p {
+	font-size: 1.2em;
+}
+
+#aboutpage .section span {
+	letter-spacing: 1px;
+}
+
+.college {
+	background: -webkit-linear-gradient(-90deg, rgba(79,85,249,0.7) 20%,rgba(0,0,0,0) 100%);
+}
+
+.career {
+	background: -webkit-linear-gradient(-90deg, rgba(39,214,195,0.5) 0%,rgba(0,0,0,0) 70%);
+}
+
+.business {
+	background: -webkit-linear-gradient(-90deg, rgba(79,85,249,0.7) 20%,rgba(0,0,0,0) 100%);
+}
+
+.developer {
+	background: -webkit-linear-gradient(-90deg, rgba(39,214,195,0.5) 0%,rgba(0,0,0,0) 70%);
 }
 
 .responsive-img {
@@ -144,10 +176,15 @@ nav {
 nav .brand-logo {
 	padding-left: 5px;
 	font-family: 'Luckiest Guy', cursive;
+	background: -webkit-linear-gradient(-45deg, rgba(126,92,249,1) 0%,rgba(14,204,197,1) 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 nav .brand-logo:hover {
-	color: #4F55F9;
+	background: rgba(79,85,249,1);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 nav .nav-icon {

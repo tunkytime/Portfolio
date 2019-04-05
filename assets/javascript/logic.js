@@ -143,4 +143,5 @@ $(document).ready(function () {
 	function changeFont () {
 		$('.title').addClass('fun-font');
 	};
+
 });
