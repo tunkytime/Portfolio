@@ -15,12 +15,12 @@
 
 /* GLOBAL=========
 ================== */
-html { 
-  background: url(../images/bg.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+html {
+	background: url(../images/bg.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 body {
@@ -34,6 +34,10 @@ body {
 main {
 	flex: 1 0 auto;
 	color: #fff;
+}
+
+p {
+	font-size: 1.3em;
 }
 
 /* COLOR-FONTS-BUTTONS */
@@ -55,13 +59,14 @@ main {
 
 .fun-font {
 	font-family: 'Luckiest Guy', cursive;
-	background: -webkit-linear-gradient(-45deg, rgba(126,92,249,1) 0%,rgba(14,204,197,1) 100%);
+	background: -webkit-linear-gradient(-45deg, rgba(126, 92, 249, 1) 0%, rgba(14, 204, 197, 1) 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
 .fun {
 	font-family: 'Luckiest Guy', cursive;
+	letter-spacing: 1px;
 }
 
 .btn {
@@ -91,17 +96,8 @@ nav {
 }
 
 nav .brand-logo {
-	padding-left: 5px;
-	font-family: 'Luckiest Guy', cursive;
-	background: -webkit-linear-gradient(-45deg, rgba(126,92,249,1) 0%,rgba(14,204,197,1) 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-nav .brand-logo:hover {
-	background: rgba(79,85,249,1);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	padding: 10px 0 10px 10px;
+	height: 100%;
 }
 
 nav .nav-icon {
@@ -117,12 +113,12 @@ nav .nav-icon:active {
 	color: #fff;
 	transform: rotate(360deg);
 	/* Permalink - http://colorzilla.com/gradient-editor/#7e5cf9+0,000000+100&0.7+0,0+99 */
-	background: -webkit-linear-gradient(45deg, rgba(79,85,249,0.7) 0%,rgba(1,2,2,0) 70%,rgba(0,0,0,0) 100%);
+	background: -webkit-linear-gradient(45deg, rgba(79, 85, 249, 0.7) 0%, rgba(1, 2, 2, 0) 70%, rgba(0, 0, 0, 0) 100%);
 }
 
 nav .menu-text {
 	font-size: .9em;
-    line-height: 2;
+	line-height: 2;
 }
 
 nav .selected {
@@ -130,14 +126,14 @@ nav .selected {
 	color: #fff;
 	transform: rotate(360deg);
 	/* Permalink - http://colorzilla.com/gradient-editor/#7e5cf9+0,000000+100&0.7+0,0+99 */
-	background: -webkit-linear-gradient(-45deg, rgba(79,85,249,0.7) 0%,rgba(1,2,2,0) 70%,rgba(0,0,0,0) 100%);
+	background: -webkit-linear-gradient(-45deg, rgba(79, 85, 249, 0.7) 0%, rgba(1, 2, 2, 0) 70%, rgba(0, 0, 0, 0) 100%);
 }
 
 /* SIDENAV =========
 ================== */
 .sidenav {
 	letter-spacing: .7px;
-	background: -webkit-linear-gradient(0deg, rgba(126,92,249,1) 0%,rgba(1,1,2,0) 100%);
+	background: -webkit-linear-gradient(0deg, rgba(126, 92, 249, 1) 0%, rgba(1, 1, 2, 0) 100%);
 }
 
 .sidenav li a {
@@ -149,50 +145,47 @@ nav .selected {
 .sidenav .nav-name:active {
 	font-family: 'Luckiest Guy', cursive;
 	color: #fff;
-	background: -webkit-linear-gradient(-45deg, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 99%,rgba(0,0,0,0) 100%);
+	background: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 99%, rgba(0, 0, 0, 0) 100%);
 }
 
 
 /* PRIMARY =========
 ================== */
 .hidden {
-	display: none;	
+	display: none;
 }
 
 /* Home Page */
+#homepage img {
+	width: 50%;
+}
+
 .name {
-  animation-delay: .7s;
+	animation-delay: .7s;
 }
 
 .title {
-  animation-delay: 1s;
+	animation-delay: 1s;
 }
 
 .small-text {
 	font-size: .5em;
 }
 
+.big-logo {
+	animation-delay: 1.5s;
+	display: block;
+	margin: 0 auto;
+	width: 50%;
+}
+
 .tagline {
-  animation-delay: 1.5s;
-}
-
-/* Skills Page */
-#skillspage a {
-	color: #27D6C3;
-}
-
-#skillspage a:hover {
-	font-family: 'Luckiest Guy', cursive;
-	letter-spacing: 1px;
+	animation-delay: 1.5s;
 }
 
 /* About Page */
 #aboutpage .section {
 	opacity: .9;
-}
-
-#aboutpage .section p {
-	font-size: 1.3em;
 }
 
 #aboutpage .section span {
@@ -201,27 +194,27 @@ nav .selected {
 
 .college {
 	/*background: -webkit-linear-gradient(-90deg, rgba(39,214,195,0.5) 20%,rgba(0,0,0,0) 100%);*/
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(39,214,195,0.7) 0%,rgba(0,0,0,0) 70%);
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(39, 214, 195, 0.7) 0%, rgba(0, 0, 0, 0) 70%);
 }
 
 .career {
 	/*background: -webkit-linear-gradient(-90deg, rgba(79,85,249,0.5) 0%,rgba(0,0,0,0) 70%);*/
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(79,85,249,0.7) 0%,rgba(0,0,0,0) 70%);
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(79, 85, 249, 0.7) 0%, rgba(0, 0, 0, 0) 70%);
 }
 
 .business {
 	/*background: -webkit-linear-gradient(-90deg, rgba(39,214,195,0.5) 20%,rgba(0,0,0,0) 100%);*/
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(39,214,195,0.7) 0%,rgba(0,0,0,0) 70%);
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(39, 214, 195, 0.7) 0%, rgba(0, 0, 0, 0) 70%);
 }
 
 .developer {
 	margin-bottom: 30px;
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,1) 20%,rgba(0,0,0,0) 70%);
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 70%);
 }
 
 .developer .webdev {
 	font-size: 1.6em;
-	background: -webkit-linear-gradient(-45deg, rgba(126,92,249,1) 0%,rgba(14,204,197,1) 100%);
+	background: -webkit-linear-gradient(-45deg, rgba(126, 92, 249, 1) 0%, rgba(14, 204, 197, 1) 100%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -240,23 +233,48 @@ nav .selected {
 }
 
 .hover-btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  background-color: #555;
-  color: white;
-  font-size: 16px;
-  padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	background-color: #555;
+	color: white;
+	font-size: 16px;
+	padding: 12px 24px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+/* Skills Page */
+#skillspage a {
+	color: #27D6C3;
+}
+
+#skillspage a:hover {
+	font-family: 'Luckiest Guy', cursive;
+	letter-spacing: 1px;
+}
+
+.test img {
+	height: 300px;
+	transform: rotate(-8deg);
+	margin: 10px;
+}
+
+/* Contact Page */
+#contactpage a {
+	color: #fff;
+}
+
+#contactpage a:hover {
+	color: #4F55F9;
 }
 
 /* Change h1 sizing on mobile for better fit */
 @media only screen and (max-width: 400px) {
-  #homepage h1 {
-    font-size: 3.9em;
-  }
+	#homepage h1 {
+		font-size: 3.9em;
+	}
 }
