@@ -3,8 +3,8 @@
 	- nav background #101010
 	- main colors used:
 		- #4F55F9 (purple)
-		- #27D6C3 (teal)
-		- #0032E3 (blue)
+		- #8ADACF (teal)
+		- #182B5B (blue)
 	https://color.adobe.com/create/color-wheel/?base=2&rule=Custom&selected=2&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.30980392156862746,0.3333333333333333,0.9764705882352941,0.18069583612018258,0.9811837320753963,1,0,0.19591339618928033,0.89,0.3271430972315102,0.8,0.07999999999999999,0.2632641106374365,0.7,0.03500000000000003&swatchOrder=0,1,2,3,4
 */
 
@@ -16,16 +16,13 @@
 /* GLOBAL=========
 ================== */
 html {
-	background: url(../images/bg.jpg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+	/*background: url(../images/bg-2.jpeg) no-repeat center center fixed;*/
+	background: #182B5B;
 }
 
 body {
 	font-family: 'Rubik', sans-serif;
-	color: #fff !important;
+	color: #000 !important;
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
@@ -33,11 +30,53 @@ body {
 
 main {
 	flex: 1 0 auto;
-	color: #fff;
+	color: #000;
 }
 
 p {
 	font-size: 1.3em;
+}
+
+.name {
+	position: relative;
+	color: #8ADACF;
+	top: 20px;
+	margin-bottom: 0;
+	font-size: 3.5em;
+}
+
+.box {
+	position: relative;
+	width: 350px;
+	height: 350px;
+	border: 15px solid #8ADACF;
+	color: #8ADACF;
+	margin: 0 auto;
+	top: 50px;
+	padding: 50px 10px 5px 10px;
+}
+
+.box span {
+	font-size: 3em;
+}
+
+.box a {
+	padding: 5px 10px;
+	border: 2px solid #8adacf;
+	border-radius: 5px;
+	color: #8adacf;
+	font-size: 1.7em;
+	margin: 10px
+}
+
+.box a:hover {
+	background-color: white;
+	color: #182b5b;
+	border: 2px solid white;
+}
+
+.menu {
+	animation-delay: 3.2s;
 }
 
 /* COLOR-FONTS-BUTTONS */
@@ -54,7 +93,7 @@ p {
 }
 
 .custom-teal {
-	background-color: #27D6C3 !important;
+	background-color: #8ADACF !important;
 }
 
 .fun-font {
@@ -179,9 +218,37 @@ nav .selected {
 	width: 50%;
 }
 
-.tagline {
-	animation-delay: 1.5s;
+.tagline-des {
+	animation-delay: 2.1s;
+	font-family: 'Pacifico', cursive;
 }
+
+
+.tagline-dev {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .10em solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.05em; /* Adjust as needed */
+  animation: 
+    typing 2.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+
+
 
 /* About Page */
 #aboutpage .section {

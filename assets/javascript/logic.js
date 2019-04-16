@@ -17,11 +17,10 @@ $(document).ready(function () {
 
 	// MAIN PROCESS
 	// ============================================	
-	home.addClass('animated rollIn fast').show();
-	$('.title').addClass('animated rubberBand').show();
-	$('.tagline').addClass('animated fadeIn').show();
-	$('.big-logo').addClass('animated fadeIn').show();
-	setTimeout(changeFont, 1400);
+	home.addClass('animated fadeIn').show();
+	$('.tagline-dev').show();
+	$('.tagline-des').addClass('animated zoomInDown').show();
+	$('.menu').addClass('animated fadeIn').show();
 
 	// MOUSE OVER EVENTS
 
@@ -105,7 +104,7 @@ $(document).ready(function () {
 	});
 
 	// Display referenced section
-	$(document).on('click', '.nav-icon, .nav-name', showSection);
+	$(document).on('click', '.box a, .nav-name', showSection);
 
 	// FUNCTIONS
 	// ============================================
