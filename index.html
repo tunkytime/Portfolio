@@ -2,296 +2,84 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons|Pacifico|Rubik">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-  <!-- Fonts & Animations -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Pacifico|Rubik" />
-  <!-- https://github.com/daneden/animate.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
-
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-
-  <!-- JavaScript & jQuery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous"></script>
-
-  <title>Portfolio</title>
+    <title>Portfolio</title>
 </head>
 
 <body>
-  <!--<header>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#!" id="home" data-name="Home"><img class="brand-logo" src="assets/images/logo.png"></a>
-        <a href="#" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down" style="margin-right: 10px">
-          <li>
-            <a href="#" id="about" class="material-icons nav-icon" data-name="About"
-              data-icon="person_outline">person_outline</a>
-          </li>
-          <li>
-            <a href="#" id="skills" class="material-icons nav-icon" data-name="Skills"
-              data-icon="mode_edit">mode_edit</a>
-          </li>
-          <li>
-            <a href="#" id="portfolio" class="material-icons nav-icon" data-name="Portfolio" data-icon="apps">apps</a>
-          </li>
-          <li>
-            <a href="#" id="contact" class="material-icons nav-icon" data-name="Contact"
-              data-icon="mail_outline">mail_outline</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
 
-  <ul class="sidenav" id="mobile">
-    <li>
-      <a href="#" id="about-side" class="nav-name" data-line="Learn About Me" data-name="About">About</a>
-    </li>
-    <li>
-      <a href="#" id="skills-side" class="nav-name" data-line="Things I Know" data-name="Skills">Skills</a>
-    </li>
-    <li>
-      <a href="#" id="port-side" class="nav-name" data-line="Stuff I've Done" data-name="Portfolio">Portfolio</a>
-    </li>
-    <li>
-      <a href="#" id="contact-side" class="nav-name" data-line="Call or Email Me" data-name="Contact">Contact Me</a>
-    </li>
-  </ul>-->
 
-  <main>  			
-    <!-- Home Page -->
-    <section id="homepage" class="hidden">
+	<nav id="navbar" class="nav-wrapper">
+		<a href="#about" class="material-icons nav-icon" data-name="About" data-icon="person_outline">person_outline</a>
+		<a href="#portfolio" class="material-icons nav-icon" data-name="Portfolio" data-icon="apps">apps</a>
+		<a href="#contact" class="material-icons nav-icon" data-name="Contact" data-icon="mail_outline">mail_outline</a>
+	</nav>
+
+    <div id="home" class="block my-blue">
+        <nav class="pushpin-demo-nav pinned" data-target="home">
+            <div class="nav-wrapper my-blue">
+                <div class="container">
+                    <a href="#home" class="brand-logo">Home</a>
+                </div>
+            </div>
+        </nav>	
+		
+		<div class="container">
 			<div class="row">
-			  <div class="col s12">
-				<h1 class="name center-align">Alex Schaaf</h1>
-				<div class="box center-align">
-					<span class="tagline-dev hidden">&lt;Developer&gt;</span>
-					<span class="tagline-des hidden">Designer</span>
-					<br>
-					<br>
-					<div class="menu hidden">
-						<a href="#" id="about" class="material-icons" data-name="About" data-icon="person_outline">person_outline</a>
-						<a href="#" id="skills" class="material-icons" data-name="Skills" data-icon="mode_edit">mode_edit</a>
-						<a href="#" id="portfolio" class="material-icons" data-name="Portfolio" data-icon="apps">apps</a>
-						<a href="#" id="contact" class="material-icons" data-name="Contact" data-code="mail_outline">mail_outline</a>
+				<div class="col s12">
+					<div class="box center-align">
+						<span class="tagline-dev">&lt;Developer&gt;</span>
+						<span class="tagline-des">Designer</span>
 					</div>
 				</div>
-			  </div>
-		  </div>
-    </section>
-    <!-- About Page -->
-    <section id="aboutpage" class="hidden">
-      <div class="row">
-        <div class="col s12">
-          <div class="section center-align college animated lightSpeedIn">
-            <div class="container">
-              <h3 class="fun">College</h3>
-              <p class="white-text">
-                In college, my plan was to work in finance. I enjoyed creating
-                financial models and presentations, which I spent way more
-                time on than anyone else. I wanted my models to
-                <span class="fun">function with tons of data inputs</span>,
-                and to create
-                <span class="fun">awe inspiring presentations.</span>
-              </p>
-            </div>
-          </div>
-
-          <div class="section center-align career animated lightSpeedIn">
-            <div class="container">
-              <h3 class="fun">Early Career</h3>
-              <p class="white-text">
-                My first job out of college was in banking, and quickly
-                discovered it was not my passion. <br />I started
-                <span class="fun">designing, creating and selling</span>
-                stationery and digital products online.
-              </p>
-            </div>
-          </div>
-
-          <div class="section center-align business animated lightSpeedIn">
-            <div class="container">
-              <h3 class="fun">Entrepreneur</h3>
-              <p class="white-text">
-                I taught myself graphic design, and continued creating
-                innovative designs and products. My business has grown
-                significantly since it began in 2016, and
-                <span class="fun">I launched my first website in 2018</span>.
-                The struggles of creating a website led to me down a long
-                <span class="fun">path of self-discovery</span>...
-              </p>
-            </div>
-          </div>
-
-          <div class="section center-align developer animated lightSpeedIn">
-            <div class="container">
-              <h3 class="fun">Present Day</h3>
-              <p class="white-text">
-                I discovered a great web development boot camp, and now I'm a
-                <span class="fun webdev">web developer</span>.<br />My path
-                was unconventional, but I finally discovered my passion -<br /><span class="fun">building web
-                  applications for the world to see!</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Skills Page -->
-    <section id="skillspage" class="hidden">
-      <div class="container">
-        <div class="col s12">
-          <div class="row">
-            <h1>Skills</h1>
-          </div>
-          <div class="row">
-            <p>
-              <span class="fun-font">HTML</span> - Yep, I can create a web page without Google or VSCode
-              auto-complete.
-            </p>
-          </div>
-          <div class="row">
-            <p>
-              <span class="fun-font">CSS</span> - I prefer Materialize or Bootstrap, but can create custom
-              styles when needed (like this page).
-            </p>
-          </div>
-          <div class="row">
-            <p>
-              <span class="fun-font">JavaScript</span> - I can make applications do things. I'll show you -
-              just click <a href="#">here </a>to see a picture of a doggo.
-            </p>
-            <span class="test hidden"></span>
-          </div>
-          <div class="row">
-            <p>
-              <span class="fun-font">jQuery</span> - I use this as much as possible, everyone loves dry
-              code.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Portfolio Page -->
-    <section id="portpage" class="hidden">
-      <div class="container">
-        <div class="row">
-          <div class="col s12">
-            <h1>Portfolio</h1>
-            <div class="row animated lightSpeedIn delay-1s fast">
-              <div class="col s12 m12 l4">
-                <img data-title="Hangman in Space - Game" data-target="modal1"
-                  data-link="https://tunkytime.github.io/Word-Guess-Game/"
-                  data-code="https://github.com/tunkytime/Word-Guess-Game.git" class="modal-trigger responsive-img"
-                  src="assets/images/hangman.jpg" />
-              </div>
-              <div class="col s12 m12 l4">
-                <img data-title="Crystal Collector - Game" data-target="modal2"
-                  data-link="https://tunkytime.github.io/unit-4-game-Crystals/"
-                  data-code="https://github.com/tunkytime/unit-4-game-Crystals.git" class="modal-trigger responsive-img"
-                  src="assets/images/crystal.jpg" />
-              </div>
-              <div class="col s12 m12 l4">
-                <img data-title="RPG - Game" data-target="modal3"
-                  data-link="https://tunkytime.github.io/unit-4-game-RPG/"
-                  data-code="https://github.com/tunkytime/unit-4-game-RPG.git" class="modal-trigger responsive-img"
-                  src="assets/images/rpg.jpg" />
-              </div>
-            </div>
-            <div class="row animated lightSpeedIn delay-1s fast">
-              <div class="col s12 m12 l4">
-                <img data-title="Movie Trivia - Game" data-target="modal4"
-                  data-link="https://tunkytime.github.io/TriviaGame/"
-                  data-code="https://github.com/tunkytime/TriviaGame.git" class="modal-trigger responsive-img"
-                  src="assets/images/triva.jpg" />
-              </div>
-              <div class="col s12 m12 l4">
-                <img data-title="GifTastic - App" data-target="modal5"
-                  data-link="https://tunkytime.github.io/GifTastic/"
-                  data-code="https://github.com/tunkytime/GifTastic.git" class="modal-trigger responsive-img"
-                  src="assets/images/giftastic.jpg" />
-              </div>
-              <div class="col s12 m12 l4">
-                <img data-title="Your Next Destination - App" data-target="modal6"
-                  data-link="https://tubidge.github.io/Project-One/home.html"
-                  data-code="https://github.com/tubidge/Project-One.git" class="modal-trigger responsive-img"
-                  src="assets/images/project.jpg" />
-              </div>
 			</div>
-            <div class="row animated lightSpeedIn delay-1s fast">
-              <div class="col s12 m12 l4">
-                <img data-title="Liri - App" data-target="modal7"
-                  data-link="https://github.com/tunkytime/liri-node-app.git"
-                  data-code="https://github.com/tunkytime/liri-node-app.git" class="modal-trigger responsive-img"
-                  src="assets/images/liri.jpg"/>
-              </div>
-			</div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Contact Page -->
-
-    <section id="contactpage" class="hidden">
-      <div class="row">
-        <div class="col s12 center-align">
-          <h1>Contact Me</h1>
-          <div class="section center-align animated lightSpeedIn">
-            <div class="container">
-              <h3 class="fun-font">Email</h3>
-              <h4><a href="mailto:schaaf1091@gmail.com">schaaf1091@gmail.com</a></h4>
-            </div>
-          </div>
-          <br>
-          <div class="section center-align animated lightSpeedIn">
-            <div class="container">
-              <h3 class="fun-font">Phone</h3>
-              <h4 href="#">801-688-9877</h4>
-            </div>
-          </div>
-        </div>
-    </section>
-    <div class="fixed-action-btn">
-      <a class="btn-floating btn-large custom-teal">
-        <i class="fas fa-link"></i>
-      </a>
-      <ul>
-        <li>
-          <a href="https://github.com/tunkytime" target="_blank" data-tooltip="GitHub Profile" data-position="left"
-            class="btn-floating waves-effect waves-light custom-teal tooltipped"><i class="fab fa-github"></i></a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/alexander-schaaf/" target="_blank" data-tooltip="LinkedIn Profile" data-position="left"
-            class="btn-floating waves-effect waves-light custom-teal tooltipped"><i class="fab fa-linkedin-in"></i></a>
-        </li>
-        <li>
-          <a href="assets/docs/resume-schaaf.pdf" target="_blank" data-tooltip="My résumé" data-position="left"
-            class="btn-floating waves-effect waves-light custom-teal tooltipped"><i class="fas fa-file"></i></a>
-        </li>
-      </ul>
+		</div>
+		
     </div>
-  </main>
+	
+    <div id="about" class="block my-teal">
+        <nav class="pushpin-demo-nav pin-top" data-target="about">
+            <div class="nav-wrapper my-teal">
+                <div class="container">
+                    <a href="#home" class="brand-logo">About Me</a>
+                </div>
+            </div>
+        </nav>
+	</div>
+		
+    <div id="portfolio" class="block my-blue">
+        <nav class="pushpin-demo-nav pin-top" data-target="portfolio">
+            <div class="nav-wrapper my-blue">
+                <div class="container">
+                    <a href="#home" class="brand-logo">Portfolio</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+	
+    <div id="contact" class="block my-teal">
+        <nav class="pushpin-demo-nav pin-top" data-target="contact">
+            <div class="nav-wrapper my-teal">
+                <div class="container">
+                    <a href="#home" class="brand-logo">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </div>
 
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal"></div>
-  <div id="modal2" class="modal"></div>
-  <div id="modal3" class="modal"></div>
-  <div id="modal4" class="modal"></div>
-  <div id="modal5" class="modal"></div>
-  <div id="modal6" class="modal"></div>
-  <div id="modal7" class="modal"></div>
-
-  <script type="text/javascript" src="assets/javascript/logic.js"></script>
+    <script type="text/javascript" src="assets/javascript/logic.js"></script>
 </body>
 
 </html>

@@ -1,347 +1,75 @@
-/* COLORS
-	- default body text  #101010
-	- nav background #101010
-	- main colors used:
-		- #4F55F9 (purple)
-		- #8ADACF (teal)
-		- #182B5B (blue)
-	https://color.adobe.com/create/color-wheel/?base=2&rule=Custom&selected=2&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.30980392156862746,0.3333333333333333,0.9764705882352941,0.18069583612018258,0.9811837320753963,1,0,0.19591339618928033,0.89,0.3271430972315102,0.8,0.07999999999999999,0.2632641106374365,0.7,0.03500000000000003&swatchOrder=0,1,2,3,4
-*/
-
-/* FONTS
-	- default:	'Rubik', sans-serif;
-	- accent: 	'Luckiest Guy', cursive;
-*/
-
-/* GLOBAL=========
-================== */
-html {
-	/*background: url(../images/bg-2.jpeg) no-repeat center center fixed;*/
-	background: #182B5B;
+html, body {
+	height: 100%;
 }
 
-body {
-	font-family: 'Rubik', sans-serif;
-	color: #000 !important;
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
+.hidden {
+	display: none;
 }
 
-main {
-	flex: 1 0 auto;
-	color: #000;
-}
-
-p {
-	font-size: 1.3em;
-}
-
-.name {
+.pin-top {
 	position: relative;
-	color: #8ADACF;
-	top: 20px;
-	margin-bottom: 0;
-	font-size: 3.5em;
 }
+
+
+.pin-bottom {
+	position: relative;
+}
+
+
+.pinned {
+	position: fixed !important;
+	top: 0px;
+}
+
+.block {
+	height: 100%;
+}
+
+.my-blue {
+	background-color: #182b5b;
+}
+
+.my-teal {
+	background-color: #8adacf;
+}
+  
+  
+#navbar {
+	background: transparent;
+	width: 250px;
+	height: 50px;
+	position: fixed;
+	top: 5px;
+	right: 10px;
+	text-align: right;
+	z-index: 3;
+	min-height: 60px;
+	box-shadow: none;
+}
+
+.nav-icon {
+	margin: 5px 15px 5px 5px;
+	color: #fff;
+	padding: 10px 5px;
+}
+
+.nav-icon:hover {
+	color: #000;
+}	
 
 .box {
-	position: relative;
 	width: 350px;
 	height: 350px;
-	border: 15px solid #8ADACF;
-	color: #8ADACF;
-	margin: 0 auto;
-	top: 50px;
+	border: 15px solid #fff;
+	color: #fff;
+	margin: 100px auto;
 	padding: 50px 10px 5px 10px;
 }
 
 .box span {
 	font-size: 3em;
-}
-
-.box a {
-	padding: 5px 10px;
-	border: 2px solid #8adacf;
-	border-radius: 5px;
-	color: #8adacf;
-	font-size: 1.7em;
-	margin: 10px
-}
-
-.box a:hover {
-	background-color: white;
-	color: #182b5b;
-	border: 2px solid white;
-}
-
-.menu {
-	animation-delay: 3.2s;
-}
-
-/* COLOR-FONTS-BUTTONS */
-.custom-purple {
-	background-color: #4F55F9 !important;
-}
-
-.custom-purple:hover {
-	background-color: #3F44C7 !important;
-}
-
-.custom-blue {
-	background-color: #0032E3 !important;
-}
-
-.custom-teal {
-	background-color: #8ADACF !important;
-}
-
-.fun-font {
-	font-family: 'Luckiest Guy', cursive;
-	background: -webkit-linear-gradient(-45deg, rgba(126, 92, 249, 1) 0%, rgba(14, 204, 197, 1) 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-.fun {
-	font-family: 'Luckiest Guy', cursive;
-	letter-spacing: 1px;
-}
-
-.btn {
-	background-color: #000 !important;
-}
-
-.btn:hover {
-	background-color: #4F55F9 !important;
-	font-family: 'Luckiest Guy', cursive;
-	letter-spacing: 1px;
-}
-
-.modal-btn {
-	margin-top: 15px;
-}
-
-.modal-btn:hover {
-	color: #000;
-}
-
-/* NAVBAR =========
-================== */
-nav {
-	background-color: #000;
-	color: #fff;
-	letter-spacing: 0.7px;
-}
-
-nav .brand-logo {
-	padding: 10px 0 10px 10px;
-	height: 100%;
-}
-
-nav .nav-icon {
-	padding: 18px;
-	color: #818181;
-	transition: transform .2s ease-in-out;
-}
-
-nav .nav-icon:hover,
-nav .nav-icon:focus,
-nav .nav-icon:active {
-	font-family: 'Luckiest Guy', cursive;
-	color: #fff;
-	transform: rotate(360deg);
-	/* Permalink - http://colorzilla.com/gradient-editor/#7e5cf9+0,000000+100&0.7+0,0+99 */
-	background: -webkit-linear-gradient(45deg, rgba(79, 85, 249, 0.7) 0%, rgba(1, 2, 2, 0) 70%, rgba(0, 0, 0, 0) 100%);
-}
-
-nav .menu-text {
-	font-size: .9em;
-	line-height: 2;
-}
-
-nav .selected {
-	font-family: 'Luckiest Guy', cursive;
-	color: #fff;
-	transform: rotate(360deg);
-	/* Permalink - http://colorzilla.com/gradient-editor/#7e5cf9+0,000000+100&0.7+0,0+99 */
-	background: -webkit-linear-gradient(-45deg, rgba(79, 85, 249, 0.7) 0%, rgba(1, 2, 2, 0) 70%, rgba(0, 0, 0, 0) 100%);
-}
-
-/* SIDENAV =========
-================== */
-.sidenav {
-	letter-spacing: .7px;
-	background: -webkit-linear-gradient(0deg, rgba(126, 92, 249, 1) 0%, rgba(1, 1, 2, 0) 100%);
-}
-
-.sidenav li a {
 	color: #fff;
 }
 
-.sidenav .nav-name:hover,
-.sidenav .nav-name:focus,
-.sidenav .nav-name:active {
-	font-family: 'Luckiest Guy', cursive;
-	color: #fff;
-	background: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 99%, rgba(0, 0, 0, 0) 100%);
-}
-
-
-/* PRIMARY =========
-================== */
-.hidden {
-	display: none;
-}
-
-/* Home Page */
-#homepage img {
-	width: 50%;
-}
-
-.name {
-	animation-delay: .7s;
-}
-
-.title {
-	animation-delay: 1s;
-}
-
-.small-text {
-	font-size: .5em;
-}
-
-.big-logo {
-	animation-delay: 1.5s;
-	display: block;
-	margin: 0 auto;
-	width: 50%;
-}
-
-.tagline-des {
-	animation-delay: 2.1s;
-	font-family: 'Pacifico', cursive;
-}
-
-
-.tagline-dev {
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .10em solid white; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.05em; /* Adjust as needed */
-  animation: 
-    typing 2.5s steps(40, end),
-    blink-caret .75s step-end infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: white; }
-}
-
-
-
-
-/* About Page */
-#aboutpage .section {
-	opacity: .9;
-}
-
-#aboutpage .section span {
-	letter-spacing: 1px;
-}
-
-.college {
-	/*background: -webkit-linear-gradient(-90deg, rgba(39,214,195,0.5) 20%,rgba(0,0,0,0) 100%);*/
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(39, 214, 195, 0.7) 0%, rgba(0, 0, 0, 0) 70%);
-}
-
-.career {
-	/*background: -webkit-linear-gradient(-90deg, rgba(79,85,249,0.5) 0%,rgba(0,0,0,0) 70%);*/
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(79, 85, 249, 0.7) 0%, rgba(0, 0, 0, 0) 70%);
-}
-
-.business {
-	/*background: -webkit-linear-gradient(-90deg, rgba(39,214,195,0.5) 20%,rgba(0,0,0,0) 100%);*/
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(39, 214, 195, 0.7) 0%, rgba(0, 0, 0, 0) 70%);
-}
-
-.developer {
-	margin-bottom: 30px;
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 70%);
-}
-
-.developer .webdev {
-	font-size: 1.6em;
-	background: -webkit-linear-gradient(-45deg, rgba(126, 92, 249, 1) 0%, rgba(14, 204, 197, 1) 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-}
-
-/* Portfolio Page */
-.responsive-img {
-	opacity: .8;
-}
-
-.modal {
-	max-height: 100%;
-}
-
-.modal img {
-	width: 70% !important;
-}
-
-.hover-btn {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	background-color: #555;
-	color: white;
-	font-size: 16px;
-	padding: 12px 24px;
-	border: none;
-	cursor: pointer;
-	border-radius: 5px;
-}
-
-/* Skills Page */
-#skillspage a {
-	color: #27D6C3;
-}
-
-#skillspage a:hover {
-	font-family: 'Luckiest Guy', cursive;
-	letter-spacing: 1px;
-}
-
-.test img {
-	height: 300px;
-	transform: rotate(-8deg);
-	margin: 10px;
-}
-
-/* Contact Page */
-#contactpage a {
-	color: #fff;
-}
-
-#contactpage a:hover {
-	color: #4F55F9;
-}
-
-/* Change h1 sizing on mobile for better fit */
-@media only screen and (max-width: 400px) {
-	#homepage h1 {
-		font-size: 3.9em;
-	}
-}
+	
+	
